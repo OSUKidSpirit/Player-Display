@@ -1,0 +1,13 @@
+<iframe class="anthonian-player" width="100%" height="315" src="{{ URL }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<script>
+  var player = document.getElementsByClassName("anthonian-player");
+  window.addEventListener("load", playerSizer);
+  window.addEventListener("resize", playerSizer);
+  function playerSizer() {
+    for (var i = 0; i < player.length; i++) {
+      let width = player[i].offsetWidth;
+      player[i].style.height = (width * 0.5625) + "px";
+    }
+  }
+</script>
